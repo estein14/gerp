@@ -1,0 +1,63 @@
+Emmett Stein
+Gerp - Hw04 
+README
+
+1. Honor:
+   All of the work found in all of the files is my own. I did not collaborate
+   with anyone else in or outside of our class. For the file indexing
+   I used the file that was provided for us to recursively make an array of all 
+   of the files. Besides that file, the rest is 100% original work. 
+   
+2. Data structures:
+   struct:
+   My main struct for each word consists of the word, and the index of the line
+   in the storage of line vector that that word came from/appears in.
+   
+   Storage:
+   For the actual physical lines, I read them into a vector and kept track of
+   the index for each line being read in. These lines were later accessed to
+   print certain words.
+   
+   Lookup:
+   I used a hashtable for my main storage compartment. Each word is mapped with 
+   its place in the table, and for the bucket, I simply used a vector to 
+   build up each bucket. Each slot in the bucket vector consists of the word
+   structs.
+   I also have two different hashtables. One for case sensative and one normal.
+   
+   Algorithms:
+   For reading in the lines, I spliced the sentence into individual words.
+   Each word was input an array before the actual hashtable to take care of 
+   words that may have appeared twice in the same sentence. Then the array of
+   words was copied and each was entered into the main hashtable.
+   
+   For print, I pass in the key (either sensative or not), and at that index 
+   in the hastable, I iterate through until the end, adding each line (from 
+   the storage vector) until the end of the bucket.
+   
+3. I first did parts one and two which were the interface and the alphanum.
+   For each of those, I simply wrote some code, tested it, and wrote more.
+   
+   For reading in the files, I began by using the provided function to help
+   get the file names. I used getline and linestream to get the lines and the
+   words. This took alot of finagling to get it right. I just used tiny to 
+   see if I could extract the sentences and words I wanted to extract.
+   
+   Once most of it worked, I used the tiny test files that were provided, and I 
+   used diff with two test1.in and test2.in files to run against the demo.
+   I'll attach those as well.
+   
+   
+4. I probably worked about 12 - 15 hours in total writing code and thinking 
+   about this assignment. Most of it was just working with the finicky parts 
+   like the indices and the getline stuff, and the next biggest portion was 
+   figuring out what structures I want to use. 
+   
+5. I LOVED this assignment. Although it was tough and I ran into many
+   roadblocks, I felt like this assignment was so realistic. With the memory
+   and time constraints it really felt like I had clear parameters for what 
+   the program should do.
+   
+   
+   
+  
